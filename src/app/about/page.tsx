@@ -1,5 +1,9 @@
 import React from 'react';
 
+import AboutHero from '@/components/AboutHero';
+import CallToAction from '@/components/CallToAction';
+import Team from '@/components/Team';
+
 export async function generateMetadata() {
   return {
     title: 'Stakis | About',
@@ -7,8 +11,14 @@ export async function generateMetadata() {
   };
 }
 
-const page = () => {
-  return <div>page</div>;
+const About = () => {
+  return (
+    <>
+      <AboutHero />
+      <Team />
+      <CallToAction />
+    </>
+  );
 };
 
-export default page;
+export default About;

@@ -16,7 +16,23 @@ export default {
       '6xl': '4rem',
     },
     extend: {
+      screens: {
+        xs: '400px',
+        '3xl': '1680px',
+        '4xl': '2200px',
+      },
+      transitionProperty: {
+        'max-height': 'max-height',
+      },
+      animation: {
+        'spin-slow': 'spin 8s linear infinite',
+      },
       colors: {
+        background: '#111025',
+        text: '#ee9c00',
+        textHover: '#954800',
+        button: '#0527cf',
+        buttonHover: '#283b43',
         gray: {
           100: '#f7fafc',
           200: '#edf2f7',

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import '@/styles/global.css';
 
 import type { Metadata } from 'next';
@@ -42,7 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning>{children}</body>
+      <body className="bg-background text-text">{children}</body>
     </html>
   );
 }
