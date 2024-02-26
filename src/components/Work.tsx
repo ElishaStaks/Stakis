@@ -12,7 +12,7 @@ const portfolioList = [
     image: '/spiff-hero-screenshot.webp',
     href: '/case-study/spiff-commerce',
     hasTarget: false,
-    borderGradient: 'border-gradient-pink-blue',
+    borderGradient: 'border-color',
   },
   {
     title: 'The Eggsperts',
@@ -21,7 +21,7 @@ const portfolioList = [
     image: '/eggsperts-screenshot.webp',
     href: 'https://the-eggsperts.com.au',
     hasTarget: true,
-    borderGradient: 'border-gradient-blue-pink',
+    borderGradient: 'border-color',
   },
   {
     title: 'Elishagram',
@@ -30,7 +30,7 @@ const portfolioList = [
     image: '/elishagram-screenshot.webp',
     href: '/case-study/elishagram',
     hasTarget: false,
-    borderGradient: 'border-gradient-blue-pink',
+    borderGradient: 'border-color',
   },
 ];
 
@@ -82,7 +82,7 @@ const WorkItem = ({
 const Work = () => {
   return (
     <section id="work" className="relative mx-auto">
-      <div className="max-container padding-container pb-[4rem] pt-[5rem]">
+      <div className="max-container padding-container py-[5rem]">
         <div className="w-full max-w-[81.25rem]">
           <div className="relative">
             <div className="grid-row-2 mb-[3rem] grid max-w-[64.5rem] flex-col justify-between gap-x-4 gap-y-8">

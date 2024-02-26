@@ -150,6 +150,11 @@ p {
   color: #ee9c00;
 } */
 
+.border-color {
+  border: 2px solid;
+  border-color: white;
+}
+
 .border-gradient-pink-blue {
   border: 2px solid;
   --border-gradient: linear-gradient(to right, #ff66cc, #66ccff);

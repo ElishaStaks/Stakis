@@ -7,7 +7,7 @@ import Button from './Button';
 const AboutHero = () => {
   return (
     <section className="relative mx-auto">
-      <div className="max-container padding-container pt-[3rem] lg:pt-[5.5rem]">
+      <div className="max-container padding-container py-[2rem] md:py-[3.5rem]">
         <div className="w-full max-w-[71.875rem]">
           <div className="relative">
             <div className="max-w-[55rem]">

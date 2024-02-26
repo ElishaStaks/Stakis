@@ -39,8 +39,8 @@ const CASESTUDIES: CaseStudyProps[] = [
     title: 'Elishagram',
     description:
       'A social media platform that mirrors the functionalities of the popular Instagram application. Seamlessly blending user-friendly design with robust features.',
-    websiteUrl: '/#work',
-    videoSrc: '/giphy.mp4',
+    websiteUrl: '',
+    videoSrc: '',
     topicTitle: 'Features',
     introContent:
       "Elishagram was our way of boosting our web development skills and creating something that feels familiar. We wanted to build a platform that's personal and enjoyable for everyone. Now, let's dive into the key features:",

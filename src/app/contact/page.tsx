@@ -109,7 +109,7 @@ const Contact = () => {
   };
   return (
     <section className="relative mx-auto max-w-[100rem] xl:max-w-[70rem]">
-      <div className="max-container padding-container py-[3rem] lg:py-[5.5rem]">
+      <div className="max-container padding-container py-[2rem] md:py-[3.5rem]">
         <div className="w-full max-w-[67.5rem]">
           <div className="max-w-[42rem]">
             <h1 className="text-4xl font-medium leading-tight text-white sm:text-5xl md:text-5xl lg:text-6xl">

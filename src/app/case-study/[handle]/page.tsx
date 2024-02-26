@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @typescript-eslint/no-redeclare */
 
 'use client';
@@ -35,7 +36,7 @@ const CaseStudy = () => {
   return (
     <>
       <section className="relative mx-auto">
-        <div className="max-container padding-container pb-[3.5rem] pt-[2.25rem]">
+        <div className="max-container padding-container py-[2rem] md:pt-[3.5rem]">
           <div className="w-full max-w-[86rem]">
             <div className="relative flex flex-col justify-between md:gap-x-4">
               <div className="mb-[2rem]">
@@ -49,7 +50,7 @@ const CaseStudy = () => {
                   href={caseStudy.websiteUrl}
                   className="rounded-md border-2 p-3 tracking-tight hover:bg-buttonHover md:text-sm"
                   type="button"
-                  title="WEBSITE ->"
+                  title={`${caseStudy.websiteUrl !== '' ? 'WEBSITE ->' : 'GITHUB ->'}`}
                   variant=""
                 />
               </div>
@@ -63,7 +64,15 @@ const CaseStudy = () => {
         <div className="max-container padding-container pb-[3rem]">
           <div className="w-full max-w-[86rem]">
             <div className="relative">
-              <video id="autoplay-video" muted loop autoPlay>
+              <video
+                id="autoplay-video"
+                muted
+                loop
+                autoPlay
+                playsInline
+                data-wf-ignore="true"
+                data-object-fit="cover"
+              >
                 <source src={caseStudy.videoSrc} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>

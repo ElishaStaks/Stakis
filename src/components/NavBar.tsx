@@ -87,7 +87,7 @@ const NavBar = () => {
               </Link>
             ))}
           </ul>
-          <div className="mt-4 flex flex-1 justify-center gap-3">
+          <div className="mt-10 flex flex-1 justify-center gap-3">
             <Button
               href="/contact"
               className="rounded-md border-2 p-3 tracking-tight hover:bg-buttonHover md:text-sm"

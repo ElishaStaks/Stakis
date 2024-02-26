@@ -74,7 +74,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="relative mx-auto mb-[-2px] mt-[2rem] overflow-hidden">
+    <section className="relative mx-auto mb-[-2px] overflow-hidden">
       <div className="max-container padding-container py-[4rem]">
         <div className="relative mx-auto max-w-[970px]">
           <div className="mx-auto mb-[4.5rem] max-w-[38.75rem] text-center lg:max-w-[45rem]">

@@ -40,7 +40,7 @@ const Person = ({ name, image, role }: Person) => {
 const Team = () => {
   return (
     <section className="relative">
-      <div className="max-container padding-container pt-[6rem] md:pt-[8rem] 2xl:pb-[4rem] 2xl:pt-[11rem]">
+      <div className="max-container padding-container py-[4rem] md:py-[5rem]">
         <div className="w-full max-w-[86rem]">
           <div className="mx-auto flex flex-col items-center justify-center text-center">
             <div className="max-w-[38rem]">
