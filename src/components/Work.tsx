@@ -57,8 +57,10 @@ const WorkItem = ({
       target={`${hasTarget ? '_blank' : ''}`}
       className="inline-block w-[48%] max-w-[100%]"
     >
-      <div className={`${borderGradient} p-1`}>
-        <div className="relative overflow-hidden pb-[77%]">
+      <div className="p-1">
+        <div
+          className={`relative overflow-hidden rounded-md pb-[77%] ${borderGradient} rounded-md`}
+        >
           <Image
             src={image}
             alt="test"
@@ -82,7 +84,7 @@ const WorkItem = ({
 const Work = () => {
   return (
     <section id="work" className="relative mx-auto">
-      <div className="max-container padding-container py-[5rem]">
+      <div className="max-container padding-container pb-[4rem] lg:pb-[8rem]">
         <div className="w-full max-w-[81.25rem]">
           <div className="relative">
             <div className="grid-row-2 mb-[3rem] grid max-w-[64.5rem] flex-col justify-between gap-x-4 gap-y-8">

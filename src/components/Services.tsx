@@ -56,7 +56,7 @@ const ServiceItem = ({ title, description, image }: ServiceItem) => {
 const Services = () => {
   return (
     <section id="services" className="relative mx-auto">
-      <div className="max-container padding-container py-[4rem] md:py-[4rem] lg:py-[5.5rem]">
+      <div className="max-container padding-container pb-[4rem] lg:pb-[8rem]">
         <div className="relative mb-[4rem] flex w-full flex-col justify-between gap-4 md:mb-[3rem] md:flex-row md:gap-y-4 lg:mb-[5.5rem] lg:max-w-[79.125rem] lg:gap-6">
           <div className="max-w-none md:max-w-[20.25rem] lg:max-w-[26.25rem]">
             <h2 className="text-4xl font-medium leading-tight sm:text-5xl md:text-5xl lg:text-5xl xl:text-5xl">

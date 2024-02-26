@@ -8,7 +8,7 @@ import Button from './Button';
 const HomeHero = () => {
   return (
     <section className="relative mx-auto">
-      <div className="max-container padding-container py-[2rem] md:py-[3.5rem]">
+      <div className="max-container padding-container pb-[4rem] pt-[2rem] lg:pb-[8rem] lg:pt-[4rem]">
         <div className="relative z-10 flex flex-col justify-between">
           <div className="max-w-[53.75rem]">
             <h1 className="text-4xl font-medium leading-tight text-white sm:text-5xl md:text-5xl lg:text-6xl">
