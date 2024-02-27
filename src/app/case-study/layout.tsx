@@ -6,6 +6,8 @@ import { BaseTemplate } from '@/templates/BaseTemplate';
 export const generateMetadata = (): Metadata => {
   return {
     title: `Stakis | Case Study`,
+    description:
+      'In depth case studies on projects completed for previous clients.',
   };
 };
 
