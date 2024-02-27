@@ -27,6 +27,7 @@ const AboutHero = () => {
                       width={800}
                       height={800}
                       loading="eager"
+                      className="rounded-md"
                     />
                   </div>
                   <Link

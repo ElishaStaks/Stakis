@@ -67,7 +67,7 @@ const Services = () => {
             <div className="pb-4">
               <p>
                 Explore our tailored web development services designed to
-                enhance your online presence and elevate your business growth
+                enhance your online presence and elevate your business growth.
               </p>
             </div>
             <Button

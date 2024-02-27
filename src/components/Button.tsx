@@ -62,9 +62,7 @@ const Button = ({
   return (
     <>
       {href !== undefined ? (
-        <Link href={href} target="_blank">
-          {renderButton()}
-        </Link>
+        <Link href={href}>{renderButton()}</Link>
       ) : (
         renderButton()
       )}

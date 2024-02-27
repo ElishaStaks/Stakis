@@ -4,25 +4,13 @@
 'use client';
 
 /* eslint-disable react/no-unescaped-entities */
+import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import React from 'react';
 
-import Button from '@/components/Button';
 import CallToAction from '@/components/CallToAction';
 import { getCaseStudyByHandle } from '@/helper';
-
-type TopicItem = {
-  description: string;
-};
-
-const TopicItem = ({ description }: TopicItem) => {
-  return (
-    <li className="my-[0.375rem] w-full pl-[0.25rem] text-white">
-      {description}
-    </li>
-  );
-};
 
 const CaseStudy = () => {
   const { handle } = useParams();
@@ -36,87 +24,98 @@ const CaseStudy = () => {
   return (
     <>
       <section className="relative mx-auto">
-        <div className="max-container padding-container py-[2rem] md:pt-[3.5rem]">
-          <div className="w-full max-w-[86rem]">
-            <div className="relative flex flex-col justify-between md:gap-x-4">
-              <div className="mb-[2rem]">
-                <h1 className=" text-4xl font-medium leading-tight sm:text-5xl md:text-5xl lg:text-6xl">
-                  {caseStudy.title}
-                </h1>
-              </div>
-              <div className="relative mr-[8.1%] flex w-auto max-w-[33.125rem] flex-col items-start gap-y-6 md:w-[70%]">
-                <p>{caseStudy.description}</p>
-                <Button
-                  href={caseStudy.websiteUrl}
-                  className="rounded-md border-2 p-3 tracking-tight hover:bg-buttonHover md:text-sm"
-                  type="button"
-                  title={`${caseStudy.websiteUrl !== '' ? 'WEBSITE ->' : 'GITHUB ->'}`}
-                  variant=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        className={`relative mx-auto ${!caseStudy.videoSrc ? 'hidden' : ''}`}
-      >
-        <div className="max-container padding-container pb-[3rem]">
-          <div className="w-full max-w-[86rem]">
-            <div className="relative">
-              <video
-                id="autoplay-video"
-                muted
-                loop
-                autoPlay
-                playsInline
-                data-wf-ignore="true"
-                data-object-fit="cover"
-              >
-                <source src={caseStudy.videoSrc} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="relative mx-auto">
-        <div className="max-container padding-container pb-[3.5rem] md:py-[4rem]">
-          <div className="w-full max-w-[86rem]">
-            <div className="relative flex flex-col gap-y-12">
-              <div className="relative flex flex-col gap-y-10">
-                <div className="grid grid-cols-1 justify-stretch gap-8">
-                  <h2 className="text-4xl font-medium leading-tight sm:text-5xl md:text-5xl lg:text-5xl xl:text-5xl">
-                    {caseStudy.topicTitle}
-                  </h2>
-                  <p>{caseStudy.introContent}</p>
-                  <div className="relative grid grid-cols-1 gap-x-16 gap-y-8 pl-[1rem]">
-                    <ul className="list-disc overflow-hidden pl-[1rem] marker:text-text">
-                      {caseStudy.topics.map((topic) => (
-                        <TopicItem
-                          key={topic.description}
-                          description={topic.description}
-                        />
-                      ))}
-                    </ul>
-                  </div>
-                  {caseStudy.repoUrl ? (
-                    <p>
-                      {`${caseStudy.endContent} `}
-                      <Link
-                        href={caseStudy.repoUrl}
-                        target="_blank"
-                        className="text-text"
-                      >
-                        Elishagram
-                      </Link>
-                      .
-                    </p>
-                  ) : (
-                    <p>{caseStudy.endContent}</p>
-                  )}
+        <div className="max-container padding-container pb-[4rem] pt-[2rem] md:pt-[3.5rem]">
+          <p className="text-4xl font-medium leading-tight sm:text-5xl md:text-5xl lg:text-5xl xl:text-5xl">
+            {caseStudy.title}
+          </p>
+
+          {/* Gallery */}
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 sm:gap-10">
+            {caseStudy.projectImages.map((project) => {
+              return (
+                <div className="mb-10 sm:mb-0" key={project.title}>
+                  <Image
+                    src={project.img}
+                    className="cursor-pointer rounded-xl shadow-lg sm:shadow-none"
+                    alt={project.title}
+                    layout="responsive"
+                    width={100}
+                    height={90}
+                    loading="eager"
+                  />
                 </div>
+              );
+            })}
+          </div>
+
+          {/* Info */}
+          <div className="mt-14 block gap-0 sm:flex sm:gap-10">
+            <div className="w-full text-left sm:w-1/3">
+              {/* Single project client details */}
+              <div className="mb-7">
+                <p className="mb-2 text-2xl font-semibold text-text">
+                  {caseStudy.projectInfo.clientHeading}
+                </p>
+                <ul className="leading-loose">
+                  {caseStudy.projectInfo.companyInfo.map((info) => {
+                    return (
+                      <li key={info.title}>
+                        <span className="text-white">{info.title}: </span>
+                        <Link
+                          href={`${info.details}`}
+                          className={
+                            info.title === 'Website' || info.title === 'Phone'
+                              ? 'cursor-pointer duration-300 hover:text-indigo-500 hover:underline dark:hover:text-indigo-400'
+                              : ''
+                          }
+                          aria-label="Project Website and Phone"
+                        >
+                          {caseStudy.title}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
+
+              {/* Single project objectives */}
+              <div className="mb-7">
+                <p className="mb-2 text-2xl font-semibold text-text">
+                  {caseStudy.projectInfo.objectivesHeading}
+                </p>
+                <p>{caseStudy.projectInfo.objectivesDetails}</p>
+              </div>
+
+              {/* Single project technologies */}
+              <div className="mb-7">
+                <p className="mb-2 text-2xl font-semibold text-text">
+                  {caseStudy.projectInfo.technologies.title}
+                </p>
+                <p>{caseStudy.projectInfo.technologies.techs.join(', ')}</p>
+              </div>
+            </div>
+
+            {/*  Single project right section details */}
+            <div className="mt-10 w-full text-left sm:mt-0 sm:w-2/3">
+              <p className="mb-7 text-2xl font-bold text-text">
+                {caseStudy.projectInfo.projectDetailsHeading}
+              </p>
+
+              {caseStudy.projectInfo.projectDetails.map((details) => {
+                return (
+                  <ul
+                    key={details.description}
+                    className="list-disc pl-[1rem] marker:text-text"
+                  >
+                    <li
+                      key={details.description}
+                      className="mb-5 text-lg text-white"
+                    >
+                      {details.description}
+                    </li>
+                  </ul>
+                );
+              })}
             </div>
           </div>
         </div>

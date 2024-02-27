@@ -9,73 +9,64 @@ const portfolioList = [
     title: 'Spiff Commerce',
     description:
       'A platform that helps brands create customized experiences for customers.',
-    image: '/spiff-hero-screenshot.webp',
+    image: '/spiff.webp',
     href: '/case-study/spiff-commerce',
     hasTarget: false,
-    borderGradient: 'border-color',
+    category: 'Web Application',
   },
   {
     title: 'The Eggsperts',
     description:
       'A Melbourne-based business at Victoria Market, showcasing their premium range of eggs and honey.',
-    image: '/eggsperts-screenshot.webp',
+    image: '/eggsperts.webp',
     href: 'https://the-eggsperts.com.au',
     hasTarget: true,
-    borderGradient: 'border-color',
+    category: 'UI/UX Design',
   },
   {
     title: 'Elishagram',
     description:
       'A sleek Instagram clone, offering users the familiar experience of connecting with others in a seamless social media environment.',
-    image: '/elishagram-screenshot.webp',
-    href: '/case-study/elishagram',
+    image: '/elishagram.webp',
+    href: '/case-study/elisha-gram',
     hasTarget: false,
-    borderGradient: 'border-color',
+    category: 'Web Application',
   },
 ];
 
 type WorkItem = {
   title: string;
-  description: string;
   image: string;
   href: string;
   hasTarget: boolean;
-  borderGradient: string;
+  category: string;
 };
 
-const WorkItem = ({
-  title,
-  description,
-  image,
-  href,
-  hasTarget,
-  borderGradient,
-}: WorkItem) => {
+const WorkItem = ({ title, image, href, hasTarget, category }: WorkItem) => {
   return (
     <Link
       href={href}
       target={`${hasTarget ? '_blank' : ''}`}
-      className="inline-block w-[48%] max-w-[100%]"
+      className="inline-block max-w-[100%]"
     >
-      <div className="p-1">
-        <div
-          className={`relative overflow-hidden rounded-md pb-[77%] ${borderGradient} rounded-md`}
-        >
+      <div className="mb-10 cursor-pointer rounded-xl shadow-lg hover:shadow-xl sm:mb-0">
+        <div className="relative h-full">
           <Image
             src={image}
-            alt="test"
-            className="absolute inset-0 size-full object-cover"
-            width={1000}
-            height={1000}
+            className=" rounded-t-xl border-none object-cover"
+            alt="Single Project"
+            layout="responsive"
+            width={100}
+            height={90}
             loading="eager"
           />
         </div>
-      </div>
-      <div className="mt-[1.5rem] flex flex-col">
-        <h3 className="mb-2 text-3xl font-medium leading-tight lg:text-4xl">
-          {title}
-        </h3>
-        <p className="text-white">{description}</p>
+        <div className="rounded-b-xl bg-white px-4 py-6 text-center">
+          <p className="mb-2 text-xl font-medium leading-tight text-text md:text-2xl">
+            {title}
+          </p>
+          <span className="text-lg leading-tight text-black">{category}</span>
+        </div>
       </div>
     </Link>
   );
@@ -99,16 +90,15 @@ const Work = () => {
                 </p>
               </div>
             </div>
-            <div className="relative z-10 flex flex-wrap justify-between gap-y-16">
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
               {portfolioList.map((portfolio) => (
                 <WorkItem
                   key={portfolio.title}
                   title={portfolio.title}
-                  description={portfolio.description}
                   image={portfolio.image}
                   href={portfolio.href}
                   hasTarget={portfolio.hasTarget}
-                  borderGradient={portfolio.borderGradient}
+                  category={portfolio.category}
                 />
               ))}
             </div>
