@@ -1,11 +1,13 @@
+/* eslint-disable no-console */
+import type { Metadata } from 'next';
+
 import { BaseTemplate } from '@/templates/BaseTemplate';
 
-export async function generateMetadata() {
+export const generateMetadata = (): Metadata => {
   return {
     title: `Stakis | Case Study`,
-    description: '',
   };
-}
+};
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <BaseTemplate>{children}</BaseTemplate>;

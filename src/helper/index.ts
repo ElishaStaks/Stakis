@@ -6,16 +6,16 @@ const CASESTUDIES: CaseStudyProps[] = [
     category: 'Web Application',
     projectImages: [
       {
-        title: 'Spiff Commerce Workflow System',
-        img: '/no-image-available.webp',
+        title: 'Spiff Commerce Workflow System Baccarat',
+        img: '/spiff-1.webp',
       },
       {
-        title: 'Spiff Commerce Workflow System',
-        img: '/no-image-available.webp',
+        title: 'Spiff Commerce Workflow System Vegemite',
+        img: '/spiff-2.webp',
       },
       {
-        title: 'Spiff Commerce Workflow System',
-        img: '/no-image-available.webp',
+        title: 'Spiff Commerce Workflow System Beer',
+        img: '/spiff-3.webp',
       },
     ],
     projectInfo: {
@@ -74,19 +74,19 @@ const CASESTUDIES: CaseStudyProps[] = [
     projectImages: [
       {
         title: 'Elishagram Design System',
-        img: '/no-image-available.webp',
+        img: '/elishagram-1.webp',
       },
       {
         title: 'Elishagram Design System',
-        img: '/no-image-available.webp',
+        img: '/elishagram-2.webp',
       },
       {
         title: 'Elishagram Design System',
-        img: '/no-image-available.webp',
+        img: '/elishagram-3.webp',
       },
     ],
     projectInfo: {
-      clientHeading: 'Personal Project',
+      clientHeading: 'Project',
       companyInfo: [
         {
           title: 'Github',

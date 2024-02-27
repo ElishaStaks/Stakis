@@ -51,7 +51,6 @@ const CaseStudy = () => {
           {/* Info */}
           <div className="mt-14 block gap-0 sm:flex sm:gap-10">
             <div className="w-full text-left sm:w-1/3">
-              {/* Single project client details */}
               <div className="mb-7">
                 <p className="mb-2 text-2xl font-semibold text-text">
                   {caseStudy.projectInfo.clientHeading}
