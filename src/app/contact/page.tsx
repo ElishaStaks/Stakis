@@ -85,7 +85,7 @@ const Contact = () => {
 
     setLoading(true);
 
-    const url = process.env.NEXT_PUBLIC_STAKIS_BACKEND_URL;
+    const url = process.env.NEXT_PUBLIC_API_URL;
 
     // Send form data to the backend
     const response = await fetch(`${url}/api/send-email`, {
