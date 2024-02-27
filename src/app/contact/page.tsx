@@ -88,7 +88,7 @@ const Contact = () => {
     const url = process.env.NEXT_PUBLIC_API_URL;
 
     // Send form data to the backend
-    const response = await fetch(`${url}/api/send-email`, {
+    const response = await fetch(`${url}/api/sendEmail`, {
       method: 'POST',
       mode: 'cors',
       headers: {
