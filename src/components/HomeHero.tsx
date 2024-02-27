@@ -37,9 +37,10 @@ const HomeHero = () => {
               <Image
                 src="/man-on-computer.webp"
                 alt="Man web developing on a computer"
+                layout="responsive"
                 width={500}
                 height={500}
-                loading="eager"
+                sizes="(min-width: 1680px) 650px, (min-width: 1380px) 570px, (min-width: 1040px) 40.63vw, (min-width: 780px) calc(50vw - 24px), calc(100vw - 48px)"
               />
             </div>
             <Link

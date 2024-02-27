@@ -59,9 +59,10 @@ const WorkItem = ({ title, image, href, hasTarget, category }: WorkItem) => {
             width={100}
             height={90}
             loading="eager"
+            sizes="(min-width: 1680px) 420px, (min-width: 1380px) 367px, (min-width: 1040px) 27.19vw, (min-width: 640px) calc(50vw - 34px), calc(100vw - 48px)"
           />
         </div>
-        <div className="rounded-b-xl bg-white px-4 py-6 text-center">
+        <div className="rounded-b-xl bg-white py-4 text-center">
           <p className="mb-2 text-xl font-medium leading-tight text-text md:text-2xl">
             {title}
           </p>

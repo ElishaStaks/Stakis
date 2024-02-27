@@ -42,6 +42,7 @@ const CaseStudy = () => {
                     width={100}
                     height={90}
                     loading="eager"
+                    sizes="(min-width: 1680px) 407px, (min-width: 1380px) 353px, (min-width: 1040px) 26.88vw, (min-width: 640px) calc(33.16vw - 41px), calc(100vw - 48px)"
                   />
                 </div>
               );
