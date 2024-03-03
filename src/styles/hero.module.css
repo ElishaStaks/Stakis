@@ -22,7 +22,6 @@
 .carousel-slider {
   display: flex;
   justify-content: center;
-  height: 100%;
   overflow: hidden;
 }
 
@@ -30,7 +29,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
   animation: scrolling 20s linear infinite;
 }
 
