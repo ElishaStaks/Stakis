@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 /* eslint-disable react/button-has-type */
 /* eslint-disable react/jsx-no-useless-fragment */
 import Image from 'next/image';
@@ -8,6 +9,7 @@ type ButtonProps = {
   title: string;
   icon?: string;
   variant: string;
+  textColor?: string;
   border?: boolean;
   className?: string;
   href?: string;
@@ -20,6 +22,7 @@ const Button = ({
   title,
   icon,
   variant,
+  textColor,
   border,
   className,
   href,
@@ -52,8 +55,12 @@ const Button = ({
         </svg>
       ) : (
         <>
-          <span className="bold-16 whitespace-nowrap">{title}</span>
           {icon && <Image src={icon} alt={title} width={24} height={24} />}
+          <span
+            className={`bold-16 whitespace-nowrap ${textColor ? `text-${textColor}` : ''}`}
+          >
+            {title}
+          </span>
         </>
       )}
     </button>

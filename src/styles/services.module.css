@@ -1,0 +1,47 @@
+.services-container {
+  @apply max-container padding-container pb-[4rem] lg:pb-[8rem]
+}
+
+.services-header-container {
+  @apply relative mb-[4rem] flex w-full flex-col justify-between gap-4 md:mb-[3rem] md:flex-row md:gap-y-4 lg:mb-[5.5rem] lg:max-w-[79.125rem] lg:gap-6
+}
+
+.services-header-width {
+  @apply max-w-none md:max-w-[20.25rem] lg:max-w-[26.25rem]
+}
+
+.services-header {
+  @apply text-4xl font-medium leading-tight sm:text-5xl md:text-5xl lg:text-5xl xl:text-5xl
+}
+
+.services-description-container {
+  @apply flex max-w-none flex-col items-start md:max-w-[30.625rem]
+}
+
+.services-btn {
+  @apply border-2 p-3 tracking-tight hover:bg-buttonHover md:text-sm
+}
+
+.services-item-container {
+  @apply sticky top-0 flex w-full flex-col gap-10
+}
+
+.services-item-content {
+  @apply relative grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8
+}
+
+.services-img-content {
+  @apply relative inset-0 flex w-full flex-col justify-center px-[10%] md:pl-0
+}
+
+.services-content-item {
+  @apply flex flex-col items-center justify-center
+}
+
+.services-content-wrap {
+  @apply max-w-none md:max-w-[26.25rem]
+}
+
+.services-item-header {
+  @apply text-3xl font-medium leading-tight md:text-4xl lg:text-5xl xl:text-6xl
+}

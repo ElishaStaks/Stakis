@@ -36,7 +36,7 @@ const CaseStudy = () => {
                 <div className="mb-10 sm:mb-0" key={project.title}>
                   <Image
                     src={project.img}
-                    className="cursor-pointer rounded-xl shadow-lg sm:shadow-none"
+                    className="cursor-pointer rounded-md border-2 border-white shadow-lg sm:shadow-none"
                     alt={project.title}
                     layout="responsive"
                     width={100}

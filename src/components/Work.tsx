@@ -49,11 +49,11 @@ const WorkItem = ({ title, image, href, hasTarget, category }: WorkItem) => {
       target={`${hasTarget ? '_blank' : ''}`}
       className="inline-block max-w-[100%]"
     >
-      <div className="mb-10 cursor-pointer rounded-xl shadow-lg hover:shadow-xl sm:mb-0">
+      <div className="mb-10 cursor-pointer shadow-lg hover:shadow-xl sm:mb-0">
         <div className="relative h-full">
           <Image
             src={image}
-            className=" rounded-t-xl border-none object-cover"
+            className=" rounded-t-md border-x-2 border-t-2 border-white object-cover"
             alt="Single Project"
             layout="responsive"
             width={100}
@@ -62,7 +62,7 @@ const WorkItem = ({ title, image, href, hasTarget, category }: WorkItem) => {
             sizes="(min-width: 1680px) 420px, (min-width: 1380px) 367px, (min-width: 1040px) 27.19vw, (min-width: 640px) calc(50vw - 34px), calc(100vw - 48px)"
           />
         </div>
-        <div className="rounded-b-xl bg-white py-4 text-center">
+        <div className="rounded-b-md bg-white py-4 text-center">
           <p className="mb-2 text-xl font-medium leading-tight text-text md:text-2xl">
             {title}
           </p>

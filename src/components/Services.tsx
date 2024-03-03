@@ -28,8 +28,8 @@ type ServiceItem = {
 const ServiceItem = ({ title, description, image }: ServiceItem) => {
   return (
     <div className="relative inset-0">
-      <div className="relative grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-        <div className="relative inset-0 flex w-full flex-col justify-center px-[10%] md:pl-0">
+      <div className="services-item-content">
+        <div className="services-img-content">
           <Image
             src={image}
             alt={title}
@@ -38,12 +38,10 @@ const ServiceItem = ({ title, description, image }: ServiceItem) => {
             loading="eager"
           />
         </div>
-        <div className="flex flex-col items-center justify-center">
-          <div className="max-w-none md:max-w-[26.25rem]">
+        <div className="services-content-item">
+          <div className="services-content-wrap">
             <div className="pb-2">
-              <h3 className="text-3xl font-medium leading-tight md:text-4xl lg:text-5xl xl:text-6xl">
-                {title}
-              </h3>
+              <h3 className="services-item-header">{title}</h3>
             </div>
             <p className="text-white">{description}</p>
           </div>
@@ -56,14 +54,14 @@ const ServiceItem = ({ title, description, image }: ServiceItem) => {
 const Services = () => {
   return (
     <section id="services" className="relative mx-auto">
-      <div className="max-container padding-container pb-[4rem] lg:pb-[8rem]">
-        <div className="relative mb-[4rem] flex w-full flex-col justify-between gap-4 md:mb-[3rem] md:flex-row md:gap-y-4 lg:mb-[5.5rem] lg:max-w-[79.125rem] lg:gap-6">
-          <div className="max-w-none md:max-w-[20.25rem] lg:max-w-[26.25rem]">
-            <h2 className="text-4xl font-medium leading-tight sm:text-5xl md:text-5xl lg:text-5xl xl:text-5xl">
+      <div className="services-container">
+        <div className="services-header-container">
+          <div className="services-header-width">
+            <h2 className="services-header">
               Services we can provide for you!
             </h2>
           </div>
-          <div className="flex max-w-none flex-col items-start md:max-w-[30.625rem]">
+          <div className="services-description-container">
             <div className="pb-4">
               <p>
                 Explore our tailored web development services designed to
@@ -75,12 +73,12 @@ const Services = () => {
               type="button"
               title="LETS CHAT"
               variant=""
-              className="rounded-md border-2 p-3 tracking-tight hover:bg-buttonHover md:text-sm"
+              className="services-btn rounded-md"
             />
           </div>
         </div>
         <div className="relative mx-auto">
-          <div className="sticky top-0 flex w-full flex-col gap-10">
+          <div className="services-item-container">
             {servicesList.map((service) => (
               <ServiceItem
                 key={service.title}

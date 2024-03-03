@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
+/* eslint-disable tailwindcss/no-custom-classname */
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 
 import Button from './Button';
 
@@ -8,75 +10,66 @@ const AboutHero = () => {
   return (
     <section className="relative mx-auto">
       <div className="max-container padding-container pb-[4rem] pt-[2rem] lg:pb-[8rem] lg:pt-[4rem]">
-        <div className="w-full max-w-[71.875rem]">
-          <div className="relative">
-            <div className="max-w-[55rem]">
-              <h1 className="text-4xl font-medium leading-tight text-white sm:text-5xl md:text-5xl lg:text-6xl">
-                A team dedicated to meeting your{' '}
-                <span className="text-text">needs.</span>
-              </h1>
-            </div>
+        <div className="relative z-10 flex flex-col justify-between">
+          <div className="max-w-[53.75rem]">
+            <h1 className="text-4xl font-medium leading-tight text-white sm:text-5xl md:text-5xl lg:text-6xl">
+              A team dedicated to meeting your{' '}
+              <span className="text-text">needs.</span>
+            </h1>
+          </div>
 
-            <div className="w-full max-w-[81.25rem] pt-[3.5rem]">
-              <div className="flex flex-col items-center justify-center md:flex-row">
-                <div className="relative grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:gap-16">
-                  <div className="relative inset-0 flex w-full flex-col justify-center md:pl-0">
-                    <Image
-                      src="/man-with-glasses.webp"
-                      alt="Man with glasses"
-                      width={800}
-                      height={800}
-                      loading="eager"
-                      className="rounded-md"
-                    />
-                  </div>
-                  <Link
-                    href="/#work"
-                    className="absolute inset-y-0 bottom-auto left-0 right-auto mb-0 flex w-auto max-w-[7rem] items-center justify-center sm:bottom-0 sm:mt-[16rem] md:mt-[14rem] md:max-w-[7.25rem] lg:mt-[16rem] lg:max-w-[8.25rem] xl:mt-[23rem] xl:max-w-[9.25rem] 2xl:mt-[24rem] 2xl:max-w-[10.25rem]"
-                  >
-                    <div className="relative flex w-full animate-spin-slow items-center justify-center">
-                      <Image
-                        className="relative w-full"
-                        src="/svgs/cta-circular.svg"
-                        alt="Spinning circular call to action"
-                        width={50}
-                        height={50}
-                        loading="eager"
-                      />
-                    </div>
-                    <div className="absolute max-w-[2.25rem] lg:max-w-[3.25rem] xl:max-w-[4.25rem]">
-                      <Image
-                        className=""
-                        src="/svgs/hero-arrow.svg"
-                        alt="Arrow icon"
-                        width={50}
-                        height={45}
-                        loading="eager"
-                      />
-                    </div>
-                  </Link>
-                  <div className="flex flex-col md:max-w-[31rem] md:items-start">
-                    <div className="pb-5">
-                      <p>
-                        We're an emerging force in the digital realm, driven by
-                        passion and innovation. Despite our early stage, our
-                        commitment to excellence remains unwavering. Join us on
-                        this exciting journey. Your support propels us forward,
-                        and together, we're creating the next chapter in our
-                        story.
-                      </p>
-                    </div>
-                    <Button
-                      href="/contact"
-                      className="rounded-md border-2 p-3 tracking-tight hover:bg-buttonHover md:text-sm"
-                      type="button"
-                      title="START A PROJECT"
-                      variant=""
-                    />
-                  </div>
-                </div>
-              </div>
+          <div className="relative mt-[3rem] flex flex-col-reverse items-center justify-between md:mt-[1.6rem] md:flex-row">
+            <div className="mt-0 flex w-auto max-w-none flex-col items-start md:w-[30%] md:max-w-[22.5rem]">
+              <p className="line-1.5 my-[1.25rem] text-white">
+                Step into a world where web development isn't just about
+                code—it's about crafting digital experiences that captivate and
+                convert. At Stakis, we're rewriting the rules of online
+                presence. Explore how our tailored web solutions redefine
+                success in the digital realm.
+              </p>
+              <Button
+                href="/contact"
+                className="rounded-md border-2 p-3 tracking-tight hover:bg-buttonHover md:text-sm"
+                type="button"
+                title="START A PROJECT"
+                variant=""
+              />
             </div>
+            <div className="z-1 relative w-full max-w-none md:w-1/2 md:max-w-[42rem]">
+              <Image
+                src="/man-on-computer.webp"
+                alt="Man web developing on a computer"
+                layout="responsive"
+                width={500}
+                height={500}
+                sizes="(min-width: 1680px) 650px, (min-width: 1380px) 570px, (min-width: 1040px) 40.63vw, (min-width: 780px) calc(50vw - 24px), calc(100vw - 48px)"
+              />
+            </div>
+            <Link
+              href="/#work"
+              className="absolute inset-x-0 bottom-auto top-0 mb-0 flex w-auto max-w-[7rem] items-center justify-center md:relative md:inset-auto md:max-w-[6.25rem] lg:mt-[10vh] lg:max-w-[7.25rem] xl:max-w-[8.25rem] 2xl:max-w-[9.25rem]"
+            >
+              <div className="relative flex w-full animate-spin-slow items-center justify-center">
+                <Image
+                  className="z-1 relative w-full"
+                  src="/svgs/cta-circular.svg"
+                  alt="Spinning circular call to action"
+                  width={50}
+                  height={50}
+                  loading="eager"
+                />
+              </div>
+              <div className="z-1 absolute max-w-[2.25rem] lg:max-w-[3.25rem] xl:max-w-[4.25rem]">
+                <Image
+                  className=""
+                  src="/svgs/hero-arrow.svg"
+                  alt="Arrow icon"
+                  width={50}
+                  height={45}
+                  loading="eager"
+                />
+              </div>
+            </Link>
           </div>
         </div>
       </div>

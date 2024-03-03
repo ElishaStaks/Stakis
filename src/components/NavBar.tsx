@@ -66,8 +66,10 @@ const NavBar = () => {
             className="rounded-md border-2 p-3 hover:bg-buttonHover"
             href="/contact"
             type="button"
-            title="START A PROJECT"
+            title="0430177749"
+            textColor="white"
             variant=""
+            icon="/svgs/phone-icon.svg"
           />
         </div>
       </div>
@@ -89,11 +91,13 @@ const NavBar = () => {
           </ul>
           <div className="mt-10 flex flex-1 justify-center gap-3">
             <Button
+              className="rounded-md border-2 p-3 hover:bg-buttonHover"
               href="/contact"
-              className="rounded-md border-2 p-3 tracking-tight hover:bg-buttonHover md:text-sm"
               type="button"
-              title="START A PROJECT"
+              title="0430177749"
+              textColor="white"
               variant=""
+              icon="/svgs/phone-icon.svg"
             />
             <Button
               className="rounded-md border-2 p-3 tracking-tight hover:bg-buttonHover md:text-sm"

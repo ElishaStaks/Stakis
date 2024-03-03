@@ -32,7 +32,7 @@ const TestimonialItem = ({
 }: TestimonialItem) => {
   return (
     <div className="mx-[auto] flex flex-none items-stretch justify-center self-stretch">
-      <div className="gradient-border relative flex h-full flex-1 flex-col items-stretch justify-center p-[4.5rem] px-[4rem] pb-[5rem]">
+      <div className="relative flex h-full flex-1 flex-col items-stretch justify-center rounded-md border-2 border-white p-[4.5rem] px-[4rem]">
         <div className="flex flex-col items-start transition-opacity duration-200">
           <div className="mb-[1.5rem] flex items-center">
             <div className="size-[4rem] max-w-[4rem] overflow-hidden rounded-full">
@@ -74,8 +74,8 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="relative mx-auto mb-[-2px] overflow-hidden">
-      <div className="max-container padding-container py-[4rem]">
+    <section className="relative mx-auto overflow-hidden">
+      <div className="max-container padding-container pb-[4rem] lg:pb-[8rem]">
         <div className="relative mx-auto max-w-[970px]">
           <div className="mx-auto mb-[4.5rem] max-w-[38.75rem] text-center lg:max-w-[45rem]">
             <h2 className="text-4xl font-medium leading-tight sm:text-5xl md:text-5xl lg:text-5xl xl:text-5xl">
@@ -103,19 +103,19 @@ const Testimonials = () => {
             <div className="ml-auto mt-[1.5rem] flex justify-between gap-5">
               <button
                 type="button"
-                className="flex min-h-[4rem] w-[5rem] items-center justify-center border-2 border-[#ff66cc] text-2xl text-white"
+                className="flex min-h-[4rem] w-[5rem] items-center justify-center rounded-md border-2 border-white text-2xl text-white"
                 onClick={handlePrev}
               >
                 &lt;
               </button>
-              <div className="gradient-border flex w-full items-center justify-center text-base">
+              <div className="flex w-full items-center justify-center rounded-md border-2 border-white text-base">
                 <div className="text-1xl text-white">{currentIndex + 1}</div>
                 <div className="text-1xl text-white">/</div>
                 <div className="text-1xl text-white">{testimonials.length}</div>
               </div>
               <button
                 type="button"
-                className="flex min-h-[3rem] w-[5rem] items-center justify-center border-2 border-[#66ccff] text-2xl text-white"
+                className="flex min-h-[3rem] w-[5rem] items-center justify-center rounded-md border-2 border-white text-2xl text-white"
                 onClick={handleNext}
               >
                 &gt;

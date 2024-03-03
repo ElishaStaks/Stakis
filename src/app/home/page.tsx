@@ -1,5 +1,5 @@
 import CallToAction from '@/components/CallToAction';
-import HomeHero from '@/components/HomeHero';
+import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import Work from '@/components/Work';
 
@@ -14,10 +14,9 @@ export async function generateMetadata() {
 export default function Home() {
   return (
     <>
-      <HomeHero />
-      <Work />
-      {/* <Testimonials /> */}
+      <Hero />
       <Services />
+      <Work />
       <CallToAction />
     </>
   );
