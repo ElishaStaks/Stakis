@@ -38,8 +38,8 @@ const Hero = () => {
                 alt={`logo-${index}`}
                 width={400}
                 height={400}
+                loading="eager"
                 className="carousel-img"
-                sizes="(min-width: 1680px) 650px, (min-width: 1380px) 570px, (min-width: 1040px) 40.63vw, (min-width: 780px) calc(50vw - 24px), calc(100vw - 48px)"
               />
             ))}
           </div>

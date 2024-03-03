@@ -53,7 +53,7 @@ const WorkItem = ({ title, image, href, hasTarget, category }: WorkItem) => {
         <div className="relative h-full">
           <Image
             src={image}
-            className=" rounded-t-md border-x-2 border-t-2 border-white object-cover"
+            className=" rounded-t-md object-cover"
             alt="Single Project"
             layout="responsive"
             width={100}
