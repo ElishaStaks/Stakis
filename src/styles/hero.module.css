@@ -4,7 +4,7 @@
 }
 
 .hero-header-container {
-  @apply relative z-10 flex flex-col justify-between pb-[4rem]
+  @apply relative z-10 flex flex-col justify-between pb-[4rem] lg:pb-[8rem]
 }
 
 .hero-header-width {
@@ -16,28 +16,28 @@
 }
 
 .carousel-img {
-  @apply m-[20px] rounded-md
+  @apply rounded-md
 }
 
 .carousel-slider {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
+  @apply flex justify-center overflow-hidden
 }
 
-.carousel-slider-items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: scrolling 20s linear infinite;
-}
 
 @keyframes scrolling {
   0% {
     transform: translateX(80%);
   }
-
+  
   100% {
     transfrom: translateX(-20%);
   }
+}
+
+.animate-scrolling {
+  animation: scrolling 20s linear infinite;
+}
+
+.carousel-slider-items {
+  @apply flex justify-center items-center gap-[1rem] animate-scrolling
 }
