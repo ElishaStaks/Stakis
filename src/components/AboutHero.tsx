@@ -1,79 +1,96 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable tailwindcss/no-custom-classname */
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 
-import Button from './Button';
+export const MISSION_VALUES = [
+  {
+    title: 'Mission',
+    description:
+      "Create web solutions that not only elevate our clients' online presence but also contribute positively to the community we serve. We believe in accountability to our employees, customers, and fellow citizens, ensuring that every interaction adds value to their lives and the common wealth of society.",
+  },
+  {
+    title: 'Vision',
+    description:
+      "To be a leading force in reshaping the digital landscape, delivering innovative web solutions that empower businesses to thrive online. We aim to set new standards of excellence in web development and maintenance, ensuring our clients' success while contributing positively to the digital realm and beyond.",
+  },
+  {
+    title: 'Values',
+    description:
+      'Our core values are the cornerstone of our business, guiding our decisions, molding our culture, and defining who we are. We are committed to constant learning, believing that experimentation is key to progress. Transparency is integral to our ethos, encouraging honest and respectful dialogue. We value speaking up when something feels off. Above all, your happiness is our priority, as we understand that nothing else truly matters',
+  },
+];
+
+type Item = {
+  title: string;
+  description: string;
+};
+
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+const Item = ({ title, description }: Item) => {
+  return (
+    <div className="flex flex-col items-start lg:max-w-[30rem] lg:flex-row">
+      <div className="mt-[1.5rem] lg:ml-[1.5rem] lg:mt-0">
+        <h3 className="bold-20 lg:bold-32 mb-[0.75rem] capitalize">{title}</h3>
+        <p className="regular-16 leading-7">{description}</p>
+      </div>
+    </div>
+  );
+};
 
 const AboutHero = () => {
   return (
-    <section className="relative mx-auto">
-      <div className="max-container padding-container pb-[4rem] pt-[2rem] lg:pb-[8rem] lg:pt-[4rem]">
-        <div className="relative z-10 flex flex-col justify-between">
-          <div className="max-w-[53.75rem]">
+    <>
+      <section className="relative mx-auto">
+        <div className="max-container padding-container py-[2rem] lg:py-[4rem]">
+          <div className="pb-[2rem] text-center lg:pb-[4rem]">
             <h1 className="text-4xl font-medium leading-tight text-white sm:text-5xl md:text-5xl lg:text-6xl">
-              A team dedicated to meeting your{' '}
-              <span className="text-text">needs.</span>
+              Meeting your <span className="text-text">needs.</span>
             </h1>
           </div>
-
-          <div className="relative mt-[3rem] flex flex-col-reverse items-center justify-between md:mt-[1.6rem] md:flex-row">
-            <div className="mt-0 flex w-auto max-w-none flex-col items-start md:w-[30%] md:max-w-[22.5rem]">
-              <p className="line-1.5 my-[1.25rem] text-white">
-                Step into a world where web development isn't just about
-                code—it's about crafting digital experiences that captivate and
-                convert. At Stakis, we're rewriting the rules of online
-                presence. Explore how our tailored web solutions redefine
-                success in the digital realm.
-              </p>
-              <Button
-                href="/contact"
-                className="rounded-md border-2 p-3 tracking-tight hover:bg-buttonHover md:text-sm"
-                type="button"
-                title="START A PROJECT"
-                variant=""
-              />
-            </div>
-            <div className="z-1 relative w-full max-w-none md:w-1/2 md:max-w-[42rem]">
+          <div className="relative grid grid-cols-1 items-center md:grid-cols-2 lg:gap-5">
+            <div className="flex justify-center">
               <Image
-                src="/man-on-computer.webp"
-                alt="Man web developing on a computer"
-                layout="responsive"
-                width={500}
-                height={500}
-                sizes="(min-width: 1680px) 650px, (min-width: 1380px) 570px, (min-width: 1040px) 40.63vw, (min-width: 780px) calc(50vw - 24px), calc(100vw - 48px)"
+                className="mb-[1rem] h-auto w-[75%] max-w-full rounded-md lg:w-full xl:w-[75%]"
+                src="/custom-web-dev.webp"
+                alt="Computer with diagrams"
+                width={640}
+                height={357}
+                loading="eager"
               />
             </div>
-            <Link
-              href="/#work"
-              className="absolute inset-x-0 bottom-auto top-0 mb-0 flex w-auto max-w-[7rem] items-center justify-center md:relative md:inset-auto md:max-w-[6.25rem] lg:mt-[10vh] lg:max-w-[7.25rem] xl:max-w-[8.25rem] 2xl:max-w-[9.25rem]"
-            >
-              <div className="relative flex w-full animate-spin-slow items-center justify-center">
-                <Image
-                  className="z-1 relative w-full"
-                  src="/svgs/cta-circular.svg"
-                  alt="Spinning circular call to action"
-                  width={50}
-                  height={50}
-                  loading="eager"
-                />
-              </div>
-              <div className="z-1 absolute max-w-[2.25rem] lg:max-w-[3.25rem] xl:max-w-[4.25rem]">
-                <Image
-                  className=""
-                  src="/svgs/hero-arrow.svg"
-                  alt="Arrow icon"
-                  width={50}
-                  height={45}
-                  loading="eager"
-                />
-              </div>
-            </Link>
+            <div>
+              <h2 className="bold-20 lg:bold-32 mb-[0.75rem] capitalize">
+                Our Story
+              </h2>
+              <p>
+                Welcome to Stakis, your go-to destination for top-notch web
+                development and maintenance services. Established in 2023, our
+                journey began with a vision crafted in 2020 to revolutionize the
+                digital landscape. We've built our reputation on our dedication
+                to client satisfaction and our continuous embrace of the latest
+                trends and technologies. Whether you're in need of bespoke web
+                development from the ground up or reliable web maintenance
+                services, we're here to bring your digital vision to life.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section className="relative overflow-hidden">
+        <div className="max-container padding-container pb-[4rem] lg:pb-[8rem]">
+          <div className="relative grid grid-cols-1 gap-x-16 gap-y-8 md:grid-cols-3">
+            {MISSION_VALUES.map((mission) => (
+              <Item
+                key={mission.title}
+                title={mission.title}
+                description={mission.description}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

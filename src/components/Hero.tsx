@@ -1,9 +1,9 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable react/no-array-index-key */
+
 'use client';
 
 import Image from 'next/image';
-
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable react/no-array-index-key */
 
 const companyLogos = [
   'vegemite.webp',
@@ -19,13 +19,20 @@ const companyLogos = [
 
 const Hero = () => {
   return (
-    <section className="relative mx-auto">
+    <section
+      className="relative mx-auto"
+      // initial={{ opacity: 0, y: -50 }} // Initial state (opacity 0 and move up 50px)
+      // animate={{ opacity: 1, y: 0 }}
+      // whileInView={{ opacity: 1 }}
+      // viewport={{ once: true }}
+      // transition={{ duration: 0.5 }} // Transition duration
+    >
       <div className="hero-container">
         <div className="hero-header-container">
           <div className="hero-header-width">
             <h1 className="hero-header">
-              Creating Outstanding Web Experiences for Your{' '}
-              <span className="text-text">Success</span>
+              Organizations that have placed their trust in{' '}
+              <span className="text-text">STAKIS</span>
             </h1>
           </div>
         </div>
@@ -36,10 +43,11 @@ const Hero = () => {
                 key={index}
                 src={`/${logo}`}
                 alt={`logo-${index}`}
-                width={400}
-                height={400}
+                width={300}
+                height={300}
                 loading="eager"
                 className="carousel-img"
+                sizes="(min-width: 768px) 400px, (min-width: 640px) 300px"
               />
             ))}
           </div>
