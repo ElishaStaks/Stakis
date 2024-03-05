@@ -31,7 +31,7 @@ const Hero = () => {
         <div className="hero-header-container">
           <div className="hero-header-width">
             <h1 className="hero-header">
-              Organizations that have placed their trust in{' '}
+              Organisations that have placed their trust in{' '}
               <span className="text-text">STAKIS</span>
             </h1>
           </div>
