@@ -3,6 +3,7 @@
 
 'use client';
 
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const companyLogos = [
@@ -19,13 +20,13 @@ const companyLogos = [
 
 const Hero = () => {
   return (
-    <section
+    <motion.section
       className="relative mx-auto"
-      // initial={{ opacity: 0, y: -50 }} // Initial state (opacity 0 and move up 50px)
-      // animate={{ opacity: 1, y: 0 }}
-      // whileInView={{ opacity: 1 }}
-      // viewport={{ once: true }}
-      // transition={{ duration: 0.5 }} // Transition duration
+      initial={{ opacity: 0, y: -50 }} // Initial state (opacity 0 and move up 50px)
+      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }} // Transition duration
     >
       <div className="hero-container">
         <div className="hero-header-container">
@@ -43,17 +44,21 @@ const Hero = () => {
                 key={index}
                 src={`/${logo}`}
                 alt={`logo-${index}`}
-                width={300}
-                height={300}
+                width={200}
+                height={200}
                 loading="eager"
                 className="carousel-img"
-                sizes="(min-width: 768px) 400px, (min-width: 640px) 300px"
+                sizes="(min-width: 1536px) 1200px,
+                     (min-width: 1280px) 1000px,
+                     (min-width: 1024px) calc(80vw - 100px),
+                     (min-width: 768px) calc(80vw - 120px),
+                     50vw"
               />
             ))}
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
